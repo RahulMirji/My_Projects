@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Handwriting Sample</title>
+    <style>
+        /* upload_styles.css */
+
+/* Reset default browser styles */
+body, h1, h2, h3, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Header styles */
+h1 {
+    color: #4a90e2;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Success message styles */
+h2 {
+    color: #5cb85c;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input and button styles */
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ab8;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: #357ab8;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Upload Handwriting Sample</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="handwriting_sample" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if extracted_text %}
+        <h2>Upload Successful!</h2>
+        <p>Your handwriting sample has been uploaded.</p>
+        <h3>Extracted Text:</h3>
+        <p>{{ extracted_text }}</p>
+        <a href="/upload/">Upload Another Sample</a>
+    {% endif %}
+</body>
+</html>
