@@ -5,10 +5,10 @@
     box-sizing: border-box;
 }
 :root{
-   
+
     --bg-black-50:#e8dfec;
     --text-black-900:#302e4d;
-     --skin-color:#ec1839; 
+     --skin-color:#ec1839;
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 body {
     background: #080808;
     color: #fff;
-}  
+}
 
 #header {
     width: 100%;
@@ -32,8 +32,8 @@ body {
     position: absolute;
     top: 20px;
     font-size: 30px;
- 
-     
+
+
 }
 .logo a{
     color: var(--bg-black-900);
@@ -90,7 +90,7 @@ nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
-    
+
 }
 
 nav ul li a {
@@ -99,7 +99,7 @@ nav ul li a {
     font-size: 18px;
     position: relative;
     font-weight: 30px;
-   
+
 }
 
 nav ul li a::after {
@@ -140,8 +140,8 @@ nav ul li a:hover::after {
 }
 
 .hero-image img {
-    width: 400px; /* Adjust the width */
-    height: 400px; /* Adjust the height */
+    width: 380px; /* Adjust the width */
+    height: 380px; /* Adjust the height */
     border-radius: 50%; /* Makes the image circular */
     box-shadow: 4px 4px 10px red; /* Adds a subtle box shadow */
     object-fit: cover; /* Ensures the image maintains its aspect ratio */
@@ -163,10 +163,10 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 {
-    height: 140%; 
+    height: 140%;
     width: 100%;
     border-radius: 15px;
-} 
+}
 
 .skills{
     flex: 0 0 40%;
@@ -216,7 +216,7 @@ nav ul li a:hover::after {
 }
 .about-col-1 {
     flex-basis: 35%;
-    
+
 }
 .about-col-1 ,h1{
     text-align:left;
@@ -227,7 +227,7 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 50%;
-  
+
     text-align: justify;
 }
 
@@ -335,12 +335,13 @@ nav ul li a:hover::after {
 
 /* -------------------------portfolio-------------------------------- */
 #portfolio {
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Changing the grid layout to emphasize landscape orientation */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -349,17 +350,23 @@ nav ul li a:hover::after {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    /* Adjusting width to fit better in landscape */
+    width: 100%;
+    max-height: 250px;
 }
 
 .work img {
-    width: 76%;
+    /* Setting the image width to full to create a landscape view */
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
 }
 
 .layer {
-    width: 80%;
+    /* Updating width to cover the entire image horizontally */
+    width: 100%;
     height: 0%;
     background: linear-gradient(rgba(115, 105, 105, 0.6), #ff004f);
     border-radius: 0px;
@@ -371,15 +378,15 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
 }
 
 .layer h3 {
-    font-size: 500;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .layer a {
@@ -396,15 +403,13 @@ nav ul li a:hover::after {
 }
 
 .work:hover img {
-    transform: scale(1.1);
-
-
+    /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
-
 .work:hover .layer {
+    /* Full overlay on hover */
     height: 100%;
-
 }
 
 .btn {
@@ -513,16 +518,16 @@ nav .fa-solid {
     .logo {
         top: 3px;
         left: 2px;
-
     }
-    .logo a::before{
-    
+
+    .logo a::before {
         width: 5px;
         height: 5px;
         bottom: 10px;
         left: 12px;
     }
-    .logo a::after{
+
+    .logo a::after {
         width: 5px;
         height: 5px;
         top: 8px;
@@ -531,17 +536,23 @@ nav .fa-solid {
 
     .header-text {
         margin-top: 88%;
-        font-size: 16px;
-
+        font-size: 20px;
     }
 
     .header-text h1 {
-        font-size: 30px;
+        font-size: 35px;
+        text-align: left;
+        margin-top: 0;
+        padding-top: 0;
+        position: relative;
+        top: 0;
+        transform: translateY(-400%);
     }
 
     nav .fa-solid {
         display: block;
         font-size: 25px;
+        cursor: pointer;
     }
 
     nav ul {
@@ -554,14 +565,16 @@ nav .fa-solid {
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+    }
 
+    nav ul.show {
+        right: 0; /* Slide in the navigation when active */
     }
 
     nav ul li {
         display: block;
         margin: 25px;
         padding-top: 40px;
-        
     }
 
     nav ul .fa-solid {
@@ -569,7 +582,21 @@ nav .fa-solid {
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
 
+    .hero-image {
+        position: absolute;
+        top: 70%;
+        right: 115px;
+        transform: translateY(-3%);
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        box-shadow: 4px 4px 10px red;
+        object-fit: cover;
     }
 
     .sub-title {
@@ -606,4 +633,53 @@ nav .fa-solid {
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    font-size: 30px;
+    margin-left: 15px;
+
+
+}
+.logo a{
+    color: var(--bg-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    position: relative;
+    text-decoration: none;
+
+}
+.logo a span{
+    font-family: 'Clicker Script', cursive;
+    font-size: 20px;
+}
+.logo a::before{
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0px;
+    left: 0px;
+}
+.logo a::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0px;
+    right: 0;
+}
+.typing{
+    color: var(--skin-color);
+}
+
+.container {
+    padding: 20px 10%;
 }

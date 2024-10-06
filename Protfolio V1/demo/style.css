@@ -5,10 +5,10 @@
     box-sizing: border-box;
 }
 :root{
-   
+
     --bg-black-50:#e8dfec;
     --text-black-900:#302e4d;
-     --skin-color:#ec1839; 
+     --skin-color:#ec1839;
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 body {
     background: #080808;
     color: #fff;
-}  
+}
 
 #header {
     width: 100%;
@@ -32,8 +32,8 @@ body {
     position: absolute;
     top: 20px;
     font-size: 30px;
- 
-     
+
+
 }
 .logo a{
     color: var(--bg-black-900);
@@ -90,7 +90,7 @@ nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
-    
+
 }
 
 nav ul li a {
@@ -99,7 +99,7 @@ nav ul li a {
     font-size: 18px;
     position: relative;
     font-weight: 30px;
-   
+
 }
 
 nav ul li a::after {
@@ -140,8 +140,8 @@ nav ul li a:hover::after {
 }
 
 .hero-image img {
-    width: 400px; /* Adjust the width */
-    height: 400px; /* Adjust the height */
+    width: 380px; /* Adjust the width */
+    height: 380px; /* Adjust the height */
     border-radius: 50%; /* Makes the image circular */
     box-shadow: 4px 4px 10px red; /* Adds a subtle box shadow */
     object-fit: cover; /* Ensures the image maintains its aspect ratio */
@@ -163,10 +163,10 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 {
-    height: 140%; 
+    height: 140%;
     width: 100%;
     border-radius: 15px;
-} 
+}
 
 .skills{
     flex: 0 0 40%;
@@ -216,7 +216,7 @@ nav ul li a:hover::after {
 }
 .about-col-1 {
     flex-basis: 35%;
-    
+
 }
 .about-col-1 ,h1{
     text-align:left;
@@ -227,7 +227,7 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 50%;
-  
+
     text-align: justify;
 }
 
@@ -521,7 +521,7 @@ nav .fa-solid {
 
     }
     .logo a::before{
-    
+
         width: 5px;
         height: 5px;
         bottom: 10px;
@@ -536,12 +536,18 @@ nav .fa-solid {
 
     .header-text {
         margin-top: 88%;
-        font-size: 16px;
+        font-size: 20px;
 
     }
 
     .header-text h1 {
-        font-size: 30px;
+    font-size: 35px;
+    text-align: left;
+    margin-top: 0; /* Remove any extra margin */
+    padding-top: 0; /* Remove padding from the top */
+    position: relative; /* Optional: Use relative or absolute positioning */
+    top: 0; /* Adjust this value to align text from the top as needed */
+    transform: translateY(-400%)
     }
 
     nav .fa-solid {
@@ -566,7 +572,7 @@ nav .fa-solid {
         display: block;
         margin: 25px;
         padding-top: 40px;
-        
+
     }
 
     nav ul .fa-solid {
@@ -575,6 +581,20 @@ nav .fa-solid {
         left: 25px;
         cursor: pointer;
 
+    }
+    .hero-image {
+        position: absolute;
+        top: 70%; /* Align image vertically */
+        right: 115px; /* Distance from the right side of the page */
+        transform: translateY(-3%); /* Centers the image vertically */
+    }
+
+    .hero-image img {
+        width: 250px; /* Adjust the width */
+        height: 250px; /* Adjust the height */
+        border-radius: 50%; /* Makes the image circular */
+        box-shadow: 4px 4px 10px red; /* Adds a subtle box shadow */
+        object-fit: cover; /* Ensures the image maintains its aspect ratio */
     }
 
     .sub-title {
