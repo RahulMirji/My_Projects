@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Inquiry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #363333;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            padding-top: 40px;
+        }
+        .form-container {
+            max-width: 600px;
+            background-color: white;
+            padding: 3%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Web Design Inquiry</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number.." required>
+
+            <label for="website-type">What kind of website do you need?</label>
+            <select id="website-type" name="website_type">
+                <option value="personal">Personal</option>
+                <option value="business">Business</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="portfolio">Portfolio</option>
+                <option value="blog">Blog</option>
+            </select>
+
+            <label for="features">Any specific features you need?</label>
+            <textarea id="features" name="features" placeholder="Describe the features you want (e.g. contact form, gallery, etc.)"></textarea>
+
+            <label for="budget">Estimated Budget</label>
+            <input type="text" id="budget" name="budget" placeholder="Your budget for the project..">
+
+            <label for="design">Design Preferences</label>
+            <textarea id="design" name="design" placeholder="Share any design preferences or inspirations (colors, style, etc.)"></textarea>
+
+            <input type="submit" value="Submit Inquiry">
+        </form>
+    </div>
+</body>
+</html>

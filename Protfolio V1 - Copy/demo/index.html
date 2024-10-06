@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/489ad34ef4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><span>L</span>et's <span>C</span>onnect.!</a>
+            </div>
+            <nav>
+               
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">My Projects</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Rahul,</span></h1> 
+                <h1>Full Stack Developer</h1>
+                <h1> and <span>AI Engineer,</span> </h1>
+                <h1>From India</h1>
+            </div>
+        </div>
+    </div>
+    <div class = "hero-image">
+        <img src="images/hero .JPG">
+    </div>
+    <!-- ------------------------------------------about-------------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+               
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am Rahul Mirji, a passionate web developer with a keen interest in exploring cutting-edge technologies. Over the past month, I’ve been honing my skills in web development, mastering JavaScript to build dynamic, interactive web applications. Alongside, I have delved into the world of Python, Machine Learning, and Artificial Intelligence, utilizing powerful libraries like TensorFlow, PyTorch, Scikit-learn, NumPy, and Pandas.
+                        
+                        My journey into AI and ML has equipped me with the ability to create data-driven solutions, from building predictive models to deploying AI applications. I’m enthusiastic about applying these skills to real-world problems and combining them with web technologies to develop intelligent, user-friendly systems.
+                        
+                        Whether it's creating seamless user experiences or building complex AI models, I am constantly striving to push the boundaries of what technology can achieve.
+                        </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('expirience')">Expirience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Developing Websites</li>
+                            <li><span>AI Enthusiastic</span><br>Machine Learning</li>
+                            <li><span>App Development</span><br>Building Android Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="expirience">
+                        <ul>
+                            <li><span>2025-Current</span><br>UI/UX Design Tranning at ARN Instuitue</li>
+                            <li><span>2024-2025</span><br>Web Developer at Nifty Coon.</li>
+                            <li><span>2024-2025</span><br>Internship at Pach Ai/Warriors Way.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>UI/Ux Design at MNO Instuite</li>
+                            <li><span>2021</span><br>HSEB From XYZ College.</li>
+                            <li><span>2022</span><br>CSIT Form TU.</li>
+                        </ul>
+                    </div>
+                    <a href="images/cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+<!---------------------------Skills------------------------------------->
+                <div class="about-col-1">
+                    <h1>Skills </h1>
+                    <div class="skills padd-15">
+                        <div class="row">
+                            <div class="skill-item padd-15">
+                                <h5>Python</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 90%;"> </div>
+                                    <div class="skill-percent">90%</div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>TensorFlow</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 80%;"> </div>
+                                    <div class="skill-percent">80%</div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>Django</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 90%;"> </div>
+                                    <div class="skill-percent">90%</div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>My SQL</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 80%;"> </div>
+                                    <div class="skill-percent">80%</div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>HTML</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 90%;"> </div>
+                                    <div class="skill-percent">90%</div>
+
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>CSS</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 90%;"> </div>
+                                    <div class="skill-percent">90%</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="skills.html" download class="btn btn2">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- ----------------------------------services--------------------------------------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Designer</h2>
+                    <p>I offer custom website design services that reflect your brand identity and engage your target audience. By blending aesthetics with functionality, I create visually appealing and user-friendly websites. My designs are responsive and optimized for all devices, ensuring a seamless experience for users while achieving your business goals effectively.</p>
+
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                    <h2>E-commerce Development</h2>
+                    <p>I specialize in building powerful e-commerce platforms that enhance online shopping experiences. My focus is on intuitive design, secure payment gateways, and seamless product management, empowering businesses to thrive in a competitive digital marketplace while ensuring user satisfaction.!</p>
+
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Designer</h2>
+                    <p>As an app designer, I craft intuitive and engaging mobile applications that resonate with users. My approach combines user-centric design principles with the latest technology trends, ensuring that each app not only looks great but also functions smoothly. I focus on delivering tailored solutions that elevate user satisfaction and drive engagement!</p>
+
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------portfolio----------------------------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/s1.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eum reprehenderit maiores
+                            dolor cupiditate iste.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/s2.jpg">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eum reprehenderit maiores
+                            dolor cupiditate iste.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/s3.jpg">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eum reprehenderit maiores
+                            dolor cupiditate iste.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- --------------------------------contact-------------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i> contact@ rahulmirji444@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>+91 7834647654</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                   
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright">
+            <p>Copyright &copy; Designed and Developed by Rahul Mirji, All rights are reserved! </p>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script src="backend.js"></script>
+</body>
+
+</html>
