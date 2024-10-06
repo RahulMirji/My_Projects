@@ -518,16 +518,16 @@ nav .fa-solid {
     .logo {
         top: 3px;
         left: 2px;
-
     }
-    .logo a::before{
 
+    .logo a::before {
         width: 5px;
         height: 5px;
         bottom: 10px;
         left: 12px;
     }
-    .logo a::after{
+
+    .logo a::after {
         width: 5px;
         height: 5px;
         top: 8px;
@@ -537,22 +537,22 @@ nav .fa-solid {
     .header-text {
         margin-top: 88%;
         font-size: 20px;
-
     }
 
     .header-text h1 {
-    font-size: 35px;
-    text-align: left;
-    margin-top: 0; /* Remove any extra margin */
-    padding-top: 0; /* Remove padding from the top */
-    position: relative; /* Optional: Use relative or absolute positioning */
-    top: 0; /* Adjust this value to align text from the top as needed */
-    transform: translateY(-400%)
+        font-size: 35px;
+        text-align: left;
+        margin-top: 0;
+        padding-top: 0;
+        position: relative;
+        top: 0;
+        transform: translateY(-400%);
     }
 
     nav .fa-solid {
         display: block;
         font-size: 25px;
+        cursor: pointer;
     }
 
     nav ul {
@@ -565,14 +565,16 @@ nav .fa-solid {
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+    }
 
+    nav ul.show {
+        right: 0; /* Slide in the navigation when active */
     }
 
     nav ul li {
         display: block;
         margin: 25px;
         padding-top: 40px;
-
     }
 
     nav ul .fa-solid {
@@ -580,21 +582,21 @@ nav .fa-solid {
         top: 25px;
         left: 25px;
         cursor: pointer;
-
     }
+
     .hero-image {
         position: absolute;
-        top: 70%; /* Align image vertically */
-        right: 115px; /* Distance from the right side of the page */
-        transform: translateY(-3%); /* Centers the image vertically */
+        top: 70%;
+        right: 115px;
+        transform: translateY(-3%);
     }
 
     .hero-image img {
-        width: 250px; /* Adjust the width */
-        height: 250px; /* Adjust the height */
-        border-radius: 50%; /* Makes the image circular */
-        box-shadow: 4px 4px 10px red; /* Adds a subtle box shadow */
-        object-fit: cover; /* Ensures the image maintains its aspect ratio */
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        box-shadow: 4px 4px 10px red;
+        object-fit: cover;
     }
 
     .sub-title {
@@ -631,4 +633,53 @@ nav .fa-solid {
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    font-size: 30px;
+    margin-left: 15px;
+
+
+}
+.logo a{
+    color: var(--bg-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    position: relative;
+    text-decoration: none;
+
+}
+.logo a span{
+    font-family: 'Clicker Script', cursive;
+    font-size: 20px;
+}
+.logo a::before{
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0px;
+    left: 0px;
+}
+.logo a::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0px;
+    right: 0;
+}
+.typing{
+    color: var(--skin-color);
+}
+
+.container {
+    padding: 20px 10%;
 }
