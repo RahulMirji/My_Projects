@@ -134,7 +134,7 @@ nav ul li a:hover::after {
 
 .hero-image {
     position: absolute;
-    top: 50%; /* Align image vertically */
+    top: 55%; /* Align image vertically */
     right: 150px; /* Distance from the right side of the page */
     transform: translateY(-20%); /* Centers the image vertically */
 }
@@ -529,11 +529,6 @@ nav .fa-solid {
         right: 22px;
     }
 
-
-    #header {
-        background-image: url(images/1.jpg);
-    }
-
     .header-text {
         margin-top: 88%;
         font-size: 16px;
@@ -612,4 +607,3 @@ nav .fa-solid {
     margin-top: -40px;
     display: block;
 }
-/*------------------- New Skills.html--------------------*

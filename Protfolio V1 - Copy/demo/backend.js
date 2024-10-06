@@ -117,22 +117,19 @@ document.addEventListener('DOMContentLoaded', () => {
         let progressValue = 0;
         const interval = setInterval(() => {
             progressValue++;
-            progressElement.style.background = `conic-gradient(#4caf50 0% ${progressValue}%, #ccc ${progressValue}% 100%)`;
+            progressElement.style.background = `conic-gradient(#00bfa6 0% ${progressValue}%, #ccc ${progressValue}% 100%)`;
             if (progressValue >= percentage) {
                 clearInterval(interval);
             }
-        }, 15);
+        }, 20);
     }
 
-    // Call this function when the page loads
+    // Call this function when the page loads or user navigates to the section
     function loadSkills() {
-        animateProgressBar('progress-html', 100);  // HTML example, 100% progress
-        animateProgressBar('progress-css', 90);    // CSS example, 90% progress
-        // Add for other skills similarly
+        animateProgressBar('progress-python', 100);
+        animateProgressBar('progress-django', 90);
+        // Add other skills similarly
     }
 
-    // Load the skills when the page opens
-    loadSkills();
+    loadSkills();  // Trigger on page load
 });
-
-
