@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #353434;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.skills-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    padding: 30px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff; /* Changed text color to white for better visibility */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 80px; /* Adjusts spacing between the skill items */
+    justify-items: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.skill {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.outer-circle {
+    width: 130px;
+    height: 130px;
+    background-color: #e9e9e9; /* Light grey background */
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-circle img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
+    background: conic-gradient(
+        red 0%,
+        red var(--progress),
+        #e9e9e9 var(--progress) 100%
+    );
+    transform: rotate(-90deg);
+    transition: all 1s ease;
+}
+
+.skill p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #fff; /* Adjusted text color to white */
+}

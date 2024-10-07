@@ -44,9 +44,10 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 0 20px;
-    text-align:center;
+    text-align: center;
     font-size: 14px;
-    transition: height 0.5s;
+    transition: height 0.5s ease; /* Smooth height transition */
+    pointer-events: none; /* Prevent interaction when hidden */
 }
 
 .layer h3 {
@@ -72,6 +73,7 @@ body {
 
 .work:hover .layer {
     height: 100%;
+    pointer-events: auto; /* Re-enable interaction on hover */
 }
 
 .btn {

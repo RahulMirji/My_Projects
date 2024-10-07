@@ -126,12 +126,13 @@ nav ul li a:hover::after {
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
+
 }
 
 .header-text h1 span {
     color: #ff004f;
-}
 
+}
 .hero-image {
     position: absolute;
     top: 55%; /* Align image vertically */
@@ -145,7 +146,28 @@ nav ul li a:hover::after {
     border-radius: 50%; /* Makes the image circular */
     box-shadow: 4px 4px 10px red; /* Adds a subtle box shadow */
     object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border: 0px solid rgba(255, 0, 0, 0.5); /* Add rgba border */
+    animation: glow 2s infinite; /* Apply the glowing animation */
 }
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5),
+                    0 0 20px rgba(255, 0, 0, 0.5),
+                    0 0 30px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7),
+                    0 0 30px rgba(255, 0, 0, 0.7),
+                    0 0 40px rgba(255, 0, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5),
+                    0 0 20px rgba(255, 0, 0, 0.5),
+                    0 0 30px rgba(255, 0, 0, 0.5);
+    }
+}
+
 
 
 /* ----------------about-------------- */
@@ -683,3 +705,26 @@ nav .fa-solid {
 .container {
     padding: 20px 10%;
 }
+/*---------------------------------CSS at 1024px------------------*/
+@media only screen and (max-width: 586px) {
+    .logo {
+        top: 3px;
+        left: 2px;
+    }
+    .hero-image {
+        position: absolute;
+        top: 70%;
+        right: 110px;
+        transform: translateY(-0%);
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 4px 4px 10px red;
+        object-fit: cover;
+        .header-text {
+            margin-top: 88%;
+            font-size: 20px;
+        }
